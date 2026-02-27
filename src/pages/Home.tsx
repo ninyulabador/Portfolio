@@ -210,9 +210,9 @@ export default function Home({ setPage }: HomeProps) {
                 }}
               />
               <img 
-                src="src/assets/image/ax.png"
+                src="/public/ax.png"
                 alt="AX"
-                style={{
+                style={{  
                   width: '100%',
                   height: '100%',
                   objectFit: 'cover',

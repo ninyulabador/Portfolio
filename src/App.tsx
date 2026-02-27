@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Service from "./pages/Services";
 import Contact from "./pages/Contact";
+import "./App.css";
 
 export default function App() {
   const [page, setPage] = useState<Page>("home");

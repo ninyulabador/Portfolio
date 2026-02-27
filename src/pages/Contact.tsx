@@ -62,10 +62,12 @@ export default function Contact() {
         setSent(true);
         // Reset form
         setForm({ name: "", email: "", project: "", message: "" });
+      } else {
+        throw new Error(`EmailJS failed with status: ${response.status}`);
       }
-    } catch (error) {
+    } catch (error: any) {
       console.error('Failed to send email:', error);
-      alert('Failed to send message. Please try again.');
+      alert(`Failed to send message: ${error?.message || 'Unknown error'}`);
     }
   };
 
