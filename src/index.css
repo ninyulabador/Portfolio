@@ -1,0 +1,169 @@
+/* ── Global Box Sizing Reset ────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Root / Body ─────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background-color: #08080C;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ── Remove default button/input styles ──────────────────────── */
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font: inherit;
+  color: inherit;
+}
+
+input,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+/* ── Remove default list styles ──────────────────────────────── */
+ul, ol {
+  list-style: none;
+}
+
+/* ── Images ──────────────────────────────────────────────────── */
+img, video {
+  display: block;
+  max-width: 100%;
+}
+
+/* ── Links ───────────────────────────────────────────────────── */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ── Navigation ───────────────────────────────────────────────── */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background: transparent;
+  transition: background 0.3s ease;
+}
+
+.nav--scrolled {
+  background: rgba(8, 8, 12, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.nav__logo {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #C8FF00;
+  font-family: 'Space Mono', monospace;
+}
+
+.nav__links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav__link {
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: 'Space Mono', monospace;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.nav__link:hover {
+  color: #C8FF00;
+}
+
+.nav__link--active {
+  color: #C8FF00;
+}
+
+/* ── Mobile Navigation ─────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .nav {
+    padding: 1rem;
+  }
+  
+  .nav__logo {
+    font-size: 1.25rem;
+  }
+  
+  .nav__links {
+    gap: 1rem;
+  }
+  
+  .nav__link {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav__links {
+    gap: 0.75rem;
+  }
+  
+  .nav__link {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+  }
+}
+
+/* ── Global Responsive Styles ───────────────────────────────────── */
+@media (max-width: 768px) {
+  h1 {
+    font-size: clamp(2.5rem, 8vw, 4rem) !important;
+  }
+  
+  h2 {
+    font-size: clamp(2rem, 6vw, 3rem) !important;
+  }
+  
+  p {
+    font-size: 0.875rem !important;
+  }
+  
+  section {
+    padding: 4rem 1rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: clamp(2rem, 10vw, 3rem) !important;
+  }
+  
+  h2 {
+    font-size: clamp(1.5rem, 8vw, 2.5rem) !important;
+  }
+  
+  section {
+    padding: 3rem 1rem !important;
+  }
+}
